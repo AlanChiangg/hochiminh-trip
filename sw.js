@@ -1,7 +1,7 @@
 /* 離線快取：頁面先試網路（3 秒內沒回應就用快取），圖示等靜態檔直接用快取。
    改了 index.html 要把 VERSION 加 1，手機才會換新。 */
-const VERSION = 'saigon-v4';
-const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png', './a2hs.js'];
+const VERSION = 'saigon-v5';
+const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-180.png', './icon-192.png', './icon-512.png', './a2hs.js', './a2hs-1.webp', './a2hs-2.webp', './a2hs-3.webp', './a2hs-4.webp'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
